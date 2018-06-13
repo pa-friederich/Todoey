@@ -16,6 +16,7 @@
 		9EA0A21A20CFF75000DA8E5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EA0A21820CFF75000DA8E5A /* Main.storyboard */; };
 		9EA0A21C20CFF75200DA8E5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EA0A21B20CFF75200DA8E5A /* Assets.xcassets */; };
 		9EA0A21F20CFF75200DA8E5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EA0A21D20CFF75200DA8E5A /* LaunchScreen.storyboard */; };
+		9EB2248720D17FE60004AB0E /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB2248620D17FE60004AB0E /* SwipeTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		9EA0A21B20CFF75200DA8E5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9EA0A21E20CFF75200DA8E5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9EA0A22020CFF75200DA8E5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EB2248620D17FE60004AB0E /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
 		AC045724472594D9AFC1D2F5 /* Pods-Todoey.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todoey.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Todoey/Pods-Todoey.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,6 +91,7 @@
 		9EA0A22920D01D1100DA8E5A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9EB2248620D17FE60004AB0E /* SwipeTableViewController.swift */,
 				9E91580C20D107C4000A66FD /* CategoryViewController.swift */,
 				9EA0A21620CFF75000DA8E5A /* TodoListViewController.swift */,
 			);
@@ -141,7 +144,6 @@
 				9EA0A20E20CFF75000DA8E5A /* Frameworks */,
 				9EA0A20F20CFF75000DA8E5A /* Resources */,
 				E551959EAF3F76C487775602 /* [CP] Embed Pods Frameworks */,
-				C8B33A1517E42CC1FEAFE4A1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -218,21 +220,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C8B33A1517E42CC1FEAFE4A1 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Todoey/Pods-Todoey-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		E551959EAF3F76C487775602 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -240,13 +227,17 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Todoey/Pods-Todoey-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeCellKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -264,6 +255,7 @@
 				9E91580D20D107C4000A66FD /* CategoryViewController.swift in Sources */,
 				9EA0A21720CFF75000DA8E5A /* TodoListViewController.swift in Sources */,
 				9EA0A21520CFF75000DA8E5A /* AppDelegate.swift in Sources */,
+				9EB2248720D17FE60004AB0E /* SwipeTableViewController.swift in Sources */,
 				9E36FD4620D150F0004D0E95 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
